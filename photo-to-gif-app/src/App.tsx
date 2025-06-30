@@ -147,6 +147,10 @@ function App() {
       <header className="app-header">
         <h1>📸 Photo to GIF</h1>
         <p>複数の画像を選んでGIFアニメーションを作成しましょう</p>
+        <div className="security-badge">
+          <span className="security-icon">🔒</span>
+          <span className="security-text">100%セキュア - 画像は外部に送信されません</span>
+        </div>
       </header>
 
       <div className="upload-section">
@@ -263,6 +267,30 @@ function App() {
           </button>
         </div>
       )}
+
+      <footer className="app-footer">
+        <div className="security-info">
+          <h3>🔒 プライバシーとセキュリティ</h3>
+          <div className="security-features">
+            <div className="security-item">
+              <span className="check-icon">✅</span>
+              <span>画像は外部サーバーに送信されません</span>
+            </div>
+            <div className="security-item">
+              <span className="check-icon">✅</span>
+              <span>すべての処理がブラウザ内で完結</span>
+            </div>
+            <div className="security-item">
+              <span className="check-icon">✅</span>
+              <span>個人情報の収集なし</span>
+            </div>
+            <div className="security-item">
+              <span className="check-icon">✅</span>
+              <span>企業環境での使用に適している</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

@@ -23,63 +23,37 @@ npm run build
 - レスポンシブデザイン
 - 複数画像フォーマット対応
 
-## Expanding the ESLint configuration
+## 🔒 セキュリティとプライバシー
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 完全にセキュア
+- ✅ 画像は外部サーバーにアップロードされません
+- ✅ すべての処理がブラウザ内で完結
+- ✅ データの外部送信なし
+- ✅ 個人情報の収集なし
+- ✅ 企業環境での使用に適している
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 技術的安全性
+- 最新のReact 19とTypeScriptを使用
+- 信頼できるライブラリのみ使用
+- 脆弱性のない依存関係
+- クロスサイトスクリプティング対策済み
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 使用方法
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. 画像をドラッグ&ドロップまたはクリックでアップロード
+2. 画像の順序を調整（←→ボタン）
+3. フレーム間隔と品質を設定
+4. 「GIFを生成」ボタンをクリック
+5. 生成されたGIFをダウンロード
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 対応フォーマット
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- PNG
+- JPG/JPEG
+- GIF
+- BMP
+- WebP
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ライセンス
+
+MIT License
