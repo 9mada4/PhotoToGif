@@ -12,9 +12,29 @@
 - **レスポンシブデザイン**: モバイル・デスクトップ対応
 - **画像並び替え**: ドラッグで簡単に順序変更
 
-## 🚀 デモ
+## 🚀 デプロイ
 
 [ライブデモを見る](https://kumamotoseita.github.io/PhotoToGif/)
+
+### GitHub Pagesでのデプロイ設定
+
+1. **リポジトリ設定**
+   - GitHubリポジトリの「Settings」タブを開く
+   - 左メニューの「Pages」をクリック
+   - 「Source」で「GitHub Actions」を選択
+
+2. **自動デプロイ**
+   - メインブランチにプッシュすると自動でデプロイされます
+
+3. **手動デプロイ（代替方法）**
+   ```bash
+   ./deploy.sh
+   ```
+
+### 必要な権限
+- リポジトリの「Settings」→「Actions」→「General」
+- 「Workflow permissions」で「Read and write permissions」を選択
+- 「Allow GitHub Actions to create and approve pull requests」にチェック
 
 ## 🛠️ 技術スタック
 
